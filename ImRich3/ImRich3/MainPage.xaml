@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:ImRich3"
+             x:Class="ImRich3.MainPage">
+
+    <StackLayout Padding="10,10,10,10" >
+        <!-- Place new controls here -->
+    	<Label Text="¡Ahora eres Rico!" 
+           HorizontalOptions="Center"
+           VerticalOptions="StartAndExpand" 
+           FontAttributes="Bold"/>
+        
+        <Label x:Name="rotatingLabel"
+           Text="PENE" 
+           HorizontalOptions="Center"
+           VerticalOptions="CenterAndExpand" 
+           FontAttributes="Bold"
+           FontSize="Large"/>
+
+        <Button HorizontalOptions="Center" 
+                VerticalOptions="EndAndExpand" 
+                Text="Click Me" 
+                Clicked="Handle_Clicked" 
+                Rotation="-15"
+                IsVisible="true"
+                FontSize="Large"
+                FontAttributes="Bold"
+                TextColor="Blue"></Button>
+        
+        <Slider 
+                VerticalOptions="EndAndExpand" 
+                IsVisible="true"
+                Maximum="80000"
+                ValueChanged="OnSliderValueChanged"></Slider>
+        
+        <Label x:Name="displayLabel"
+               Text="(uninitialized)"
+               HorizontalOptions="Center"
+               VerticalOptions="CenterAndExpand" />
+        
+    </StackLayout>
+
+</ContentPage>
